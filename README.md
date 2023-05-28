@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+# InfoserverChatAPI
+
+A small chatbot app using the powers of TypeScript and Redux Thunk
+Don't forget to activate the CORS demo from (https://cors-anywhere.herokuapp.com/).
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
