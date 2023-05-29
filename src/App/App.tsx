@@ -24,7 +24,7 @@ function App(): JSX.Element {
   return (
     <div className={`App-header ${theme}`}>
       <Sidebar toggleTheme={toggleTheme} />
-      <Chat inputText={inputText} userMessage={userMessage} />
+      <Chat userMessage={userMessage} />
       <ChatInput
         inputText={inputText}
         setInputText={setInputText}

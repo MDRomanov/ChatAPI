@@ -3,10 +3,8 @@ import Modal from '../../components/Modal/Modal';
 import './chat.css';
 
 function Chat({
-  inputText,
   userMessage,
 }: {
-  inputText: string;
   userMessage: string;
 }): JSX.Element {
   const [modalOpen, setModalOpen] = useState(false);
