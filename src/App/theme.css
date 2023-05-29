@@ -1,0 +1,45 @@
+.dark {
+  background-image: url(https://c4.wallpaperflare.com/wallpaper/792/639/808/pattern-monochrome-telegram-logo-cats-hd-wallpaper-preview.jpg);
+}
+.light {
+  background-image: url(https://i.pinimg.com/originals/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg);
+}
+
+.light .navbar {
+  background-color: rgb(87, 155, 215);
+}
+
+.light .navbar-toggle {
+  background-color: rgb(87, 155, 215);
+}
+.light .nav-menu {
+  background-color: rgb(87, 155, 215);
+}
+
+.light .sent {
+  background-color: rgb(80, 168, 80);
+  color: black;
+}
+
+.light .received {
+  background-color: aliceblue;
+  color: black;
+}
+
+.dark .sendMessage {
+  background-color: rgb(44, 44, 219);
+}
+
+.dark .sendMessage:hover {
+  transform: scale(1.04);
+  background-color: rgb(49, 49, 247);
+}
+
+.dark .modalContainer {
+  background-color: rgb(65, 65, 65);
+  color: white;
+}
+
+.light .closeModal {
+  color: black
+}
