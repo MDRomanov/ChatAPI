@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+@media (min-width: 320px) and (max-width: 900px) {
+  .message {
+    min-width: 60vw;
+    max-height: 40vh;
+  }
+
+  textarea {
+    min-width: 300px;
+  }
+
+  .nav-menu {
+    max-width: 240px;
+  }
+}
