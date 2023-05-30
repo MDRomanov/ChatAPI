@@ -7,7 +7,7 @@ import './theme.css';
 
 function App(): JSX.Element {
   const [inputText, setInputText] = useState('');
-  const [userMessage, setUserMessage] = useState('');
+  const [userMessage, setUserMessage] = useState(JSON.parse(localStorage.getItem('userRequest') || '{}'));
   const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
   const toggleTheme = (): void => {
     if (theme === 'light') {

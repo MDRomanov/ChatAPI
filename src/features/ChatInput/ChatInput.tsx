@@ -5,7 +5,7 @@ import * as FaIcons from 'react-icons/fa';
 function ChatInput({
   inputText,
   setInputText,
-  setUserMessage
+  setUserMessage,
 }: {
   inputText: string;
   setInputText: React.Dispatch<React.SetStateAction<string>>;
@@ -14,12 +14,14 @@ function ChatInput({
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>): void => {
     setInputText(e.target.value);
   };
-  const handleSubmit: React.FormEventHandler<HTMLFormElement> = (event) : void => {
+  const handleSubmit: React.FormEventHandler<HTMLFormElement> = (
+    event,
+  ): void => {
     event.preventDefault();
     const newMessage = inputText;
     // const newMessage = (data : string[]) : string[] => ([...data, inputText]);
     setUserMessage(newMessage);
-    // setInputText('');
+    setInputText('');
   };
   return (
     <form id="input-form" onSubmit={handleSubmit}>
@@ -28,6 +30,8 @@ function ChatInput({
           placeholder="Узнать про 3g или Lte"
           value={inputText}
           onChange={handleChange}
+          onKeyDown={(event: React.KeyboardEvent<HTMLTextAreaElement>) =>
+            event.key === 'Enter' ? handleSubmit : null}
         />
         <button type="submit" disabled={!inputText} className="sendMessage">
           Send
