@@ -11,7 +11,11 @@ function Modal({
   const deleteChat = (): void => {
     setRemove((prev) => !prev);
     toggleModal();
+    localStorage.removeItem('answer');
+    localStorage.removeItem('greeting');
+    localStorage.removeItem('userRequest');
   };
+
   return (
     <div className="modalBackground">
       <div className="modalContainer">
