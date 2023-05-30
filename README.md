@@ -1,7 +1,7 @@
 # InfoserverChatAPI
 
 A small chatbot app using the powers of TypeScript and Redux Thunk.\
-Don't forget to activate the CORS demo from (https://cors-anywhere.herokuapp.com/).
+To start, the server should start with `cd cors-server` && `node cors`.
 
 ## Getting Started with Create React App
 

@@ -1,19 +1,21 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import stateContext from '../../botReducer/context';
+import userContext from '../../userReducer/context';
 import './modal.css';
 
 function Modal({
   toggleModal,
-  setRemove,
 }: {
   toggleModal: () => void;
-  setRemove: React.Dispatch<React.SetStateAction<boolean>>;
 }): JSX.Element {
+  const { dispatch } = useContext(stateContext);
+  const { userDispatch } = useContext(userContext);
   const deleteChat = (): void => {
-    setRemove((prev) => !prev);
     toggleModal();
-    localStorage.removeItem('answer');
-    localStorage.removeItem('greeting');
-    localStorage.removeItem('userRequest');
+    dispatch({ type: 'DELETE_CHAT' });
+    userDispatch({ type: 'DELETE_USERCHAT' });
+    localStorage.removeItem('localBotChat');
+    localStorage.removeItem('localUserChat');
   };
 
   return (

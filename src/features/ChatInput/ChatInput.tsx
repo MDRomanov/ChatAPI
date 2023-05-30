@@ -19,10 +19,10 @@ function ChatInput({
   ): void => {
     event.preventDefault();
     const newMessage = inputText;
-    // const newMessage = (data : string[]) : string[] => ([...data, inputText]);
     setUserMessage(newMessage);
     setInputText('');
   };
+
   return (
     <form id="input-form" onSubmit={handleSubmit}>
       <div className="chatInput">

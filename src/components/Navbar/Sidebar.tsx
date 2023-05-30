@@ -35,16 +35,3 @@ function Sidebar({ toggleTheme }: { toggleTheme: () => void }): JSX.Element {
 }
 
 export default Sidebar;
-
-// {SidebarData.map((item, index) => {
-//   return (
-//     <li key={index} className={item.cName}>
-//       <Link to={item.path}>
-//         {item.icon}
-//         <span>{item.title}</span>
-//       </Link>
-//     </li>
-//   );
-// })}
-
-// <IconContext.Provider value={{ color: '#fff' }}>
