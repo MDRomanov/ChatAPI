@@ -4,11 +4,7 @@ import stateContext from '../../botReducer/context';
 import './chat.css';
 import userContext from '../../userReducer/context';
 
-function Chat({
-  userMessage,
-}: {
-  userMessage: string;
-}): JSX.Element {
+function Chat({ userMessage }: { userMessage: string }): JSX.Element {
   const [modalOpen, setModalOpen] = useState(false);
   const [greet, setGreet] = useState(
     JSON.parse(localStorage.getItem('greeting') || '{}'),
@@ -97,11 +93,7 @@ function Chat({
 
   return (
     <div className="chat">
-      {modalOpen && (
-        <Modal
-          toggleModal={toggleModal}
-        />
-      )}
+      {modalOpen && <Modal toggleModal={toggleModal} />}
       {greet.length > 2 && (
         <div id="greet" className="received message">
           {greet}
