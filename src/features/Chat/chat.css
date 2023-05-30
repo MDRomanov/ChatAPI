@@ -8,8 +8,9 @@ div.chat {
   margin: 20px;
   box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
   min-height: 10vh;
+  max-height: 100vh;
   padding: 10px;
-  max-width: 20vw;
+  max-width: 30vw;
   box-sizing: border-box;
   font-size: 25px;
 }
