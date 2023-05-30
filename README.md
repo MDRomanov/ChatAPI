@@ -1,7 +1,8 @@
 # InfoserverChatAPI
 
 A small chatbot app using the powers of TypeScript and Redux Thunk.\
-To start, the server should run with `cd cors-server` && `node cors` on a different terminal.
+To start, the server should run with `cd cors-server` && `node cors` on a different terminal.\
+A bug with the message order is still present, I am eager to fix it!
 
 ## Getting Started with Create React App
 
