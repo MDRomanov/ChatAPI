@@ -91,6 +91,21 @@ function Chat({ userMessage }: { userMessage: string }): JSX.Element {
     userDispatch({ type: 'ADD_USERCHAT', payload: userMessage });
   }, [userDispatch, userMessage]);
 
+  function concat(array1: string[], array2: string[]): string[] {
+    const arr = [];
+    for (let i = 0; i < array1.length; i += 1) {
+      for (let j = 0; j < array2.length; j += 1) {
+        if (i === j) {
+          arr.push(array1[i], array2[j]);
+        }
+      }
+    }
+    return arr;
+  }
+
+  const arrays = concat(userState.userChatArr, state.chatArr);
+  console.log(arrays);
+
   return (
     <div className="chat">
       {modalOpen && <Modal toggleModal={toggleModal} />}
@@ -99,19 +114,14 @@ function Chat({ userMessage }: { userMessage: string }): JSX.Element {
           {greet}
         </div>
       )}
-      {userState.userChatArr.map(
+      {arrays.map(
         (msg, index) =>
           msg.length > 0 && (
-            <div key={index} className="sent message">
+            <div
+              key={index}
+              className={index % 2 === 0 ? 'sent message' : 'received message'}
+            >
               {msg}
-            </div>
-          ),
-      )}
-      {state.chatArr.map(
-        (text, ind) =>
-          text.length > 0 && (
-            <div key={ind} className="received message">
-              {text}
             </div>
           ),
       )}
