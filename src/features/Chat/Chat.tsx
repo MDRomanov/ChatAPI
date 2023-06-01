@@ -104,7 +104,6 @@ function Chat({ userMessage }: { userMessage: string }): JSX.Element {
   }
 
   const arrays = concat(userState.userChatArr, state.chatArr);
-  console.log(arrays);
 
   return (
     <div className="chat">
